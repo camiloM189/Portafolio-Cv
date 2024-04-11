@@ -1,5 +1,12 @@
 import { useState } from "react";
 import { useDescargarCurriculum } from "../hooks/useDescargarCurriculum";
+import { CalidadIESComponents } from "./SquaresComponents/CalidadIESComponents";
+import { HeroBardsComponents } from "./SquaresComponents/HeroBardsComponents";
+import { CvComponents } from "./SquaresComponents/CvComponents";
+import { ContactoComponents } from "./SquaresComponents/ContactoComponents";
+import { DesingComponents } from "./SquaresComponents/DesingComponents";
+import { ContactosImgCompoents } from "./SquaresComponents/ContactosImgCompoents";
+import { ProyectosComponents } from "./SquaresComponents/ProyectosComponents";
 
 interface IType {
   setProyectos:(type: boolean) => void;
@@ -20,17 +27,31 @@ export const SquaresComponents = ({proyectos,setProyectos}:IType) => {
     return (	
   
         <section className="row g-0 mb-5 " style={{display:'flex',justifyContent:'space-between'}} >
-        <article  className={`col-lg-12 col-md-12 mb-1 `} style={{ cursor: 'pointer', display: proyectos ? 'none' : 'block',overflow:'hidden' }} onClick={() => setProyectos(true)}>
-          <div className="card text-bg-dark border-0  rounded-0" >
-            <img src="/img-portafolios/proyectos.jpg" className="img-fluid" alt="cliente1" style={{height:'400px', objectFit: 'cover'}} />
-            <div className="card-img-overlay second-alpha-color d-flex flex-column justify-content-md-center" style={{justifyContent:'center'}}>
-              <h5 className="card-title text-center">Proyectos</h5>      
-            </div>
-          </div>            
-          
-        </article> 
+          <ProyectosComponents proyectos={proyectos} setProyectos={setProyectos}/>
           <h3 className={`${(proyectos) ? 'animate__animated animate__bounceInLeft' : 'd-none'}`}>Proyectos</h3>
-        <article  className={`col-lg-6 col-md-12 mb-1 `} 
+       
+        <CalidadIESComponents proyectos={proyectos}/>
+        <HeroBardsComponents proyectos={proyectos}/>
+        <CvComponents descargarCurriculum={descargarCurriculum}/>
+        <ContactoComponents onChangeContactos={onChangeContactos} contactos={contactos}/>
+        <DesingComponents/>
+        <h3 className={`${(contactos) ? '' : 'd-none'} mt-3`}>Contacto</h3>
+        <ContactosImgCompoents contactos={contactos}/>
+        </section>
+    )
+
+}
+
+{/* <article  className={`col-lg-12 col-md-12 mb-1 `} style={{ cursor: 'pointer', display: proyectos ? 'none' : 'block',overflow:'hidden' }} onClick={() => setProyectos(true)}>
+<div className="card text-bg-dark border-0  rounded-0" >
+  <img src="/img-portafolios/proyectos.jpg" className="img-fluid" alt="cliente1" style={{height:'400px', objectFit: 'cover'}} />
+  <div className="card-img-overlay second-alpha-color d-flex flex-column justify-content-md-center" style={{justifyContent:'center'}}>
+    <h5 className="card-title text-center">Proyectos</h5>      
+  </div>
+</div>            
+
+</article>  */}
+ {/* <article  className={`col-lg-6 col-md-12 mb-1 `} 
           data-bs-target="#proyecto1" data-bs-toggle="modal" 
           style={{ cursor: 'pointer', display: proyectos ? 'block' : 'none' ,overflow:'hidden'}}>
           <div className={`${(proyectos) ? 'animate__animated animate__backInLeft' : ''}`}>
@@ -81,12 +102,8 @@ export const SquaresComponents = ({proyectos,setProyectos}:IType) => {
 
 
 
-        </article>   
-
-
-
-
-        <article  className={`col-lg-6 col-md-12 mb-1`} 
+        </article>    */}
+   {/* <article  className={`col-lg-6 col-md-12 mb-1`} 
         data-bs-target="#proyecto2" data-bs-toggle="modal" style={{ cursor: 'pointer', display: proyectos ? 'block' : 'none',overflow:'hidden' }}>
           <div className={`${(proyectos) ? 'animate__animated animate__backInRight' : ''}`} >
           <div className="card text-bg-dark border-0  rounded-0 " >
@@ -125,12 +142,9 @@ export const SquaresComponents = ({proyectos,setProyectos}:IType) => {
         </div>
             </div>
           </div>
-        </article> 
+        </article>  */}
 
-
-
-
-        <article className="col-lg-4 col-md-12 mb-1" style={{cursor:'pointer',overflow:'hidden'}} onClick={descargarCurriculum}>
+ {/* <article className="col-lg-4 col-md-12 mb-1" style={{cursor:'pointer',overflow:'hidden'}} onClick={descargarCurriculum}>
           <div className="card text-bg-dark border-0  rounded-0">
             <img src="/img-portafolios/cv.jpg" className="card-img" alt="cliente1" style={{height: '280px',objectFit:'cover'}}/>
             <div className="card-img-overlay second-alpha-color d-flex flex-column justify-content-md-center" style={{justifyContent:'center'}}>
@@ -148,8 +162,10 @@ export const SquaresComponents = ({proyectos,setProyectos}:IType) => {
 
             
           
-        </article>
-        <article className="col-lg-4 col-md-12 mb-1" style={{cursor:'pointer',overflow:'hidden'}} onClick={onChangeContactos}>
+        </article> */}
+
+
+   {/* <article className="col-lg-4 col-md-12 mb-1" style={{cursor:'pointer',overflow:'hidden'}} onClick={onChangeContactos}>
           <div className="card text-bg-dark border-0  rounded-0">
             <img src="/img-portafolios/contacto.jpg" className="card-img" alt="cliente1" style={{height: '280px',objectFit:'cover'}}/>
             <div className={`card-img-overlay ${(contactos) ? 'second-color' : 'second-alpha-color'}  d-flex flex-column justify-content-md-center`} style={{justifyContent:'center'}}>
@@ -159,8 +175,9 @@ export const SquaresComponents = ({proyectos,setProyectos}:IType) => {
              
             </div>
           </div>     
-        </article>
-        <article className="col-lg-4 col-md-12 mb-1" style={{cursor:'pointer',overflow:'hidden'}}  data-bs-target="#diseño" data-bs-toggle="modal">
+        </article> */}
+
+     {/* <article className="col-lg-4 col-md-12 mb-1" style={{cursor:'pointer',overflow:'hidden'}}  data-bs-target="#diseño" data-bs-toggle="modal">
           <div className="card text-bg-dark border-0  rounded-0">
             <img src="/img-portafolios/desing.jpg" className="card-img" alt="cliente1" style={{height: '280px',objectFit:'cover'}}/>
             <div className="card-img-overlay second-alpha-color d-flex flex-column justify-content-md-center" style={{justifyContent:'center'}}>
@@ -206,9 +223,9 @@ export const SquaresComponents = ({proyectos,setProyectos}:IType) => {
             </div>
           </div>
           
-        </article>
-        <h3 className={`${(contactos) ? '' : 'd-none'} mt-3`}>Contacto</h3>
-      <article className={`row text-center  ${(contactos) ? '' : 'd-none'} d-flex justify-content-center `}>
+        </article> */}
+
+      {/* <article className={`row text-center  ${(contactos) ? '' : 'd-none'} d-flex justify-content-center `}>
           <div className="col-sm-4 col-4 col-md-4 col-lg-2 " style={{cursor:'pointer'}}>
             <a href="https://github.com/camiloM189">
               <img src="/git.png" className="img-fluid img-contacto animate__animated animate__backInUp" alt="" /></a>
@@ -265,10 +282,4 @@ export const SquaresComponents = ({proyectos,setProyectos}:IType) => {
               <img src="/link.png" className="img-fluid img-contacto animate__animated animate__backInUp" alt="" /></a>
             <p>Linkelind</p>
           </div>
-      </article> 
-
-
-        </section>
-    )
-
-}
+      </article>  */}
