@@ -4,8 +4,8 @@ export const QuienSoyComponents = () => {
         <article className="article-quiensoy text-center">
         <img src="/fotoDePerfil.png" alt="fotoDePerfil.png" className="img-perfil"/>
         <div className="contenedor-p-h2">
-        <h2 className="Franklin-Gothic-Medium quien-soy-h2">¿Quien Soy?</h2>
-            <p style={{ textAlign: 'justify'}} className="Franklin-Gothic-Medium-italic quien-soy-p">
+        <h2 className="Franklin-Gothic-Medium ">¿Quien Soy?</h2>
+            <p style={{ textAlign: 'justify'}} className="Franklin-Gothic-Medium-italic">
             Apasionado desarrollador front-end junior y diseñador gráfico
             con experiencia en la creación de interfaces web dinámicas y
             atractivas,   así   como   en  el  diseño  de  elementos  visuales
@@ -20,3 +20,6 @@ export const QuienSoyComponents = () => {
     </article>		
     )	
 }
+
+// quien-soy-p
+// quien-soy-h2
