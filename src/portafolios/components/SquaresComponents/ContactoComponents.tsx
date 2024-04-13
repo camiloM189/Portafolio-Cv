@@ -1,3 +1,4 @@
+import { useRef } from "react";
 
 interface IChangeContactos{
     onChangeContactos:() => void;
@@ -7,6 +8,10 @@ interface IChangeContactos{
 
 
 export const ContactoComponents = ({onChangeContactos,contactos}:IChangeContactos) => {
+
+  
+
+
     return (	
         <article className="col-lg-4 col-md-12 mb-1" style={{cursor:'pointer',overflow:'hidden'}} onClick={onChangeContactos}>
           <div className="card text-bg-dark border-0  rounded-0">
