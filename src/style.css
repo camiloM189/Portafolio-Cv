@@ -1,0 +1,175 @@
+:root{
+  --second-alpha-color:rgba(0, 0, 0, 0.75);
+  --second-color:rgba(27, 27, 27, 0.75);
+}
+body{
+  background-color: #dbdbd9;
+  color: #333333;
+}
+.true{
+  background-color: #dbdbd9;
+  color: #333333;
+}
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.Franklin-Gothic-Medium{
+  font-family: "Franklin-Gothic-Medium", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.second-alpha-color{
+  background-color: var(--second-alpha-color);
+}
+.second-color{
+  background-color: var(--second-color);
+
+}
+.Franklin-Gothic-Medium-italic{
+  font-family: "Franklin-Gothic-Medium", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.col-6{
+  width: 49.7% !important;
+}
+.col-lg-6{
+  width: 49.7% !important;
+}
+.col-4{
+  width: 32.9999999%  !important;
+}
+.col-lg-4{
+  width: 32.9999999%  !important;
+}
+
+
+@media (min-width: 180px){ 
+  .article-developer-h1{
+    font-size: 60px;
+  }
+  .img-perfil{
+    width: 100%;
+    
+  
+  }
+  .article-developer-p{
+    font-size: 25px;
+}
+}
+@media (min-width: 350px){ 
+  .article-developer-h1{
+    font-size: 60px;
+  }
+  .img-perfil{
+      width: 60%;
+  
+  }
+  .article-developer-p{
+    font-size: 25px;
+}
+}
+@media (min-width: 360px){ 
+  .contenedor-portafolio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+}
+.img-contacto{
+  width: 50%;
+}
+.article-developer-h1{
+  font-size: 60px;
+}
+.img-perfil{
+    width: 60%;
+
+}
+.article-quiensoy{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.article-developer-p{
+    margin: 0;
+    margin-top: -4%;
+    font-size: 25px;
+}
+.card{
+  transition: transform 1.2s ease;
+}
+.card:hover {
+    transform: scale(1.08); 
+    transition: transform 1.2s ease; 
+    z-index: 100;
+}
+
+.quien-soy-h2{
+  font-size: 70px;
+}
+.quien-soy-p{
+  font-size: 20px;
+}
+.contenedor-p-h2{
+  padding: 10px;
+}
+}
+@media (min-width: 576px){ 
+  
+}
+@media (min-width: 992px){ 
+  .contenedor-portafolio{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+ 
+}
+.img-contacto{
+  width: 50%;
+}
+.article-developer-h1{
+    font-size:180px;
+}
+.img-perfil{
+    width: 40%;
+
+}
+.article-quiensoy{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.article-developer-p{
+    margin: 0;
+    margin-top: -6%;
+    font-size: 42px;
+}
+.card:hover {
+    transform: scale(1.08); 
+    transition: transform 1.2s ease; 
+    z-index: 100;
+}
+.card{
+  transition: transform 1.2s ease;
+}
+.quien-soy-h2{
+  font-size: 70px;
+}
+.quien-soy-p{
+  font-size: 20px;
+}
+.contenedor-p-h2{
+  padding: 0px;
+}
+}
+@media (min-width: 1200px){ 
+  
+}
+@media (min-width: 1400px){ 
+
+}
